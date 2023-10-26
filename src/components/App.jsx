@@ -1,15 +1,25 @@
 import { Component } from 'react';
+import { Searchbar } from './Searchbar/Searchbar';
+import { ImageGallery } from './ImageGallery/ImageGallery';
+import { Container } from './App.styled';
+import { TostBox } from './Toast/Toast';
 
 export class App extends Component {
   state = {
-    contacts: [],
+    requestValue: '',
+  };
+
+  handleFormSubmit = requestValue => {
+    this.setState({ requestValue: requestValue });
   };
 
   render() {
     return (
-      <div>
-        <h1>Hi</h1>
-      </div>
+      <Container>
+        <Searchbar onSubmit={this.handleFormSubmit} />
+        <ImageGallery requestValue={this.state.requestValue} />
+        <TostBox />
+      </Container>
     );
   }
 }
