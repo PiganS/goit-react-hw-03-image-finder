@@ -47,6 +47,12 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(150, 153, 154);
+  background: linear-gradient(
+    90deg,
+    rgba(150, 153, 154, 0.742734593837535) 0%,
+    rgba(38, 35, 35, 0.5998774509803921) 100%
+  );
 }
 
 img {
@@ -54,6 +60,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
-

@@ -10,7 +10,11 @@ export const ImageGalleryItem = ({
   openModal,
 }) => {
   return (
-    <StyledImageGalleryItem data-img={largeImageURL} onClick={openModal}>
+    <StyledImageGalleryItem
+      onClick={() => {
+        openModal(largeImageURL);
+      }}
+    >
       <StyledImageGalleryImage src={webformatURL} alt={tags} />
     </StyledImageGalleryItem>
   );
