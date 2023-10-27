@@ -51,7 +51,7 @@ export class ImageGallery extends Component {
       });
       this.setState({ spiner: false });
     } catch (error) {
-      console.error('Error fetching data: ', error);
+      toast.error('Error fetching data: ', error);
     } finally {
       this.setState({ spiner: false });
     }
