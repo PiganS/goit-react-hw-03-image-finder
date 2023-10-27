@@ -59,6 +59,9 @@ export class App extends Component {
   };
 
   handleFormSubmit = requestValue => {
+    if (this.state.requestValue === requestValue) {
+      return;
+    }
     this.setState({ requestValue: requestValue, hits: [], page: 1 });
   };
 
